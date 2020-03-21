@@ -10,6 +10,7 @@ const sentry = require('./app/services/sentry');
 
 const dbConfig = require('./config/database');
 
+// eslint-disable-next-line max-len
 mongoose.connect(dbConfig.url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 requireDir(dbConfig.modelsPath);
 

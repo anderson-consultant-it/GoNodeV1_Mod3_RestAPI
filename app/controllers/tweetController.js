@@ -19,4 +19,12 @@ module.exports = {
       return next(error);
     }
   },
+  async list(req, res, next) {
+    try {
+      const tweets = await Tweet.find();
+      return res.status(200).json(tweets);
+    } catch (error) {
+      return next(error);
+    }
+  },
 };

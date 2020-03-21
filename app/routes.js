@@ -14,6 +14,8 @@ const controllers = requireDir('./controllers');
 routes.post('/signup', controllers.authController.signup);
 routes.post('/signin', controllers.authController.signin);
 
+routes.get('/tweets', controllers.tweetController.list);
+
 routes.use(authMiddleware);
 
 /**
